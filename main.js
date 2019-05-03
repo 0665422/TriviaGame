@@ -39,7 +39,7 @@ var game = {
     incorrect: 0,
 
     countdown: function() {
-        game.correct --;
+        game.counter --;
         $("#counter-number").html(game.counter);
         if (game.counter === 0) {
             console.log('Time Up!');
@@ -51,9 +51,9 @@ var game = {
         timer = setInterval(game.counter, 1000);
         panel.html("<h2>" + questions[this.currentQuestion] + "</h2>");
         for (var i = 0; i < questions[this.currentQuestion].answers.length; i++) {
-            panel.append("<button class+'answer-button' id='button' data-name=''" + 
-            questions[this.currentQuestion].answer[i]) + ">" + 
-            questions[this.currentQuestion].answer[i] + "</button>";
+            panel.append("<button class+'answer-button' id='button' data-name='" + 
+            questions[this.currentQuestion].answer[i] + "'>" + 
+            questions[this.currentQuestion].answer[i] + "</button>");
         }
     },
 
@@ -136,3 +136,18 @@ var game = {
         this.loadQuestion();
     }
 };
+
+// CLICK EVENTS
+// ----------------------------------------------------------------------------------------------
+$(document).on('click', '#start-over', function() {
+    game.reset();
+});
+
+$(document).on('click', '#answer-button', function(e) {
+    game.clicked(e);
+});
+
+$(document).on('click', '#start', function() {
+    $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'>30</span> seconds </h2>");
+    game.loadQuestion();
+});
