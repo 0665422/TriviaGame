@@ -4,31 +4,38 @@ html, body {
 
 body {
     text-align: center;
-    background-image: url("assets/background1.jpg")
+    background-image: url("assets/background2.jpg");
+    font-family: 'Montserrat', sans-serif;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 #wrapper {
     width: 960px;
-    height: 95%;
+    height: 90%;
     box-sizing: border-box;
     margin: 2.5% auto;
-    background-color:  #48e592;
+    background-color: transparent;
 }
 
-#sun-wrapper {
+#sub-wrapper {
     position: relative;
-    top: 15%;
+    top: 5%;
 }
 
 button {
     display: block;
     width: 50%;
-    height: 20%;
+    height: 30px;
     margin: 0 auto;
-    font-size: 42px; 
+    font-size: 18px;
     cursor: pointer;
     background: transparent;
     border: 0;
+    color: white;
 }
 
 img {
@@ -38,9 +45,9 @@ img {
 h1 {
     padding-top: 2.5%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 6.4em;
+    font-size: 6.5em;
     font-weight: bold;
-    color: #ee1573;
+    color: white;
 }
 
 h2 {
@@ -54,12 +61,11 @@ h3 {
 }
 
 #start {
-    margin-top: 10%;
-    background: #57eee9;
-    border: 2px solid #dd8420;
+    background: black;
+    border: 2px solid white;
 }
 
 button:hover {
-    background: #57eee9;
-    border: 2px solid #dd8420;
+    background: black;
+    border: 2px solid white;
 }
